@@ -3,14 +3,15 @@ type Query {
 }
 
 type Book {
-    id: ID
+    id: ID!
     name: String
     pageCount: Int
-    author: Author
+    author: Author!
 }
 
 type Author {
-    id: ID
+    id: ID!
     firstName: String
     lastName: String
+    books: [Book]!
 }
